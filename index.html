@@ -47,26 +47,55 @@
      li {
         display:block;
         padding:10px;
-     }
+        }
+        article {
+        font-family: Arial;
+        color:#2D242B;
+        font-size:20px;
+        }
+        footer {
+        font-family: Arial;
+        color:#CAD2C5;
+        font-size:14px;
+        }
+        a {
+        color:#bbb6c1;
+        font-style:italic;
+        }
     </style>
+    <script>
+        function changeBackgroundColor(x, color) {
+        x.style.backgroundColor = color;
+        }
+
+    </script>
 </head>
 <header style="background-color:#2D242B; padding:10px 20px 10px 20px">
     <h1 style="text-align:left;color:#CAD2C5">Scotti Anderson</h1>
-    <h2 style="text-align:left;"><a href="mailto:scottibanderson@gmail.com" style="color:#bbb6c1">ScottiBAnderson@gmail.com</a></h2>
+    <h2 style="text-align:left;"><a href="mailto:scottibanderson@gmail.com" style="font-style:normal">ScottiBAnderson@gmail.com</a></h2>
 </header>
 <body>
     <section style="display:flex">
         <nav style="background-color:#84A98C;width:25%">
             <ul>
-                <li>About Me</li>
-                <li>Software</li>
-                <li>Games</li>
-                <li>Art</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')">About Me</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')">Software</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')">Games</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')">Art</li>
             </ul>
         </nav>
         <div style="background-color:#52796F;padding:10px;width:75%">
-            <article style="background-color:#CAD2C5;padding:10px"></article>
+            <article style="background-color:#CAD2C5;padding:10px">
+                Content
+            </article>
         </div>
     </section>
 </body>
+<footer style="background-color:#2D242B; padding:10px 20px 10px 20px">
+    <span style="font-weight:bold;font-size:20px;">Scotti Anderson</span><br />
+    <a href="mailto:scottibanderson@gmail.com">ScottiBAnderson@gmail.com</a><br />
+    <a href="https://twitter.com/taletopgames">@taletopgames</a><br />
+    <a href="https://www.linkedin.com/in/scotti-anderson/">View my LinkedIn profile</a><br />
+
+</footer>
 </html>
