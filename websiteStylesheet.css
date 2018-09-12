@@ -1,0 +1,81 @@
+﻿:root {
+    --headerColor: #2D242B;
+    --linkColor: #BBB6C1;
+    --lightColor: #CAD2C5;
+    --mediumColor: #84A98C;
+    --darkColor: #52796F;
+}
+
+/* Header */
+header {
+    line-height: 10px;
+    font-family: arial;
+    background-color: var(--headerColor);
+    color: var(--lightColor);
+    padding: 10px 20px 10px 20px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* body */
+body {
+    font-family: Arial;
+}
+
+/* Nav */
+nav {
+    background-color: var(--mediumColor);
+}
+
+ul {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    color: var(--headerColor);
+}
+
+li {
+    display: block;
+    padding: 10px;
+}
+
+/* Content */
+.main {
+    background-color: var(--darkColor);
+    padding: 10px;
+}
+
+article {
+    color: var(--headerColor);
+    background-color: var(--lightColor);
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Footer */
+
+footer {
+    font-family: Arial;
+    color: var(--lightColor);
+    background-color: var(--headerColor);
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+}
+
+/* Links */
+
+a {
+    color: var(--linkColor);
+    font-style: italic;
+}
