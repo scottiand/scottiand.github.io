@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="websiteStylesheet.css">
     <script type="text/javascript" src="links.js"></script>
 </head>
-<header>
+<header onclick="goToPage('index.html')">
     <h1>Scotti Anderson</h1>
     <h2><a href="mailto:scottibanderson@gmail.com" style="font-style:normal">ScottiBAnderson@gmail.com</a></h2>
 </header>
@@ -17,8 +17,7 @@
     <section style="display:flex">
         <nav style="width:25%">
             <ul>
-                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
-                    onclick="goToPage('aboutme.html')">About Me</li>
+                <li class="selectedButton">About Me</li>
                 <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
                     onclick="goToPage('software.html')">Software</li>
                 <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
@@ -29,8 +28,7 @@
         </nav>
         <div style="width:75%" class="main">
             <article>
-                <img class="pixelArt" src="images/skylinesmall.png" style="width:100%;"/><br />
-                <p class="imageDescription">Portland Skyline, 2016</p>
+                About Me
             </article>
         </div>
     </section>

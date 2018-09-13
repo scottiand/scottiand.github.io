@@ -13,6 +13,7 @@ header {
     background-color: var(--headerColor);
     color: var(--lightColor);
     padding: 10px 20px 10px 20px;
+    cursor:pointer;
 }
 
 h1 {
@@ -48,6 +49,11 @@ ul {
 li {
     display: block;
     padding: 10px;
+    cursor:pointer;
+}
+
+.selectedButton {
+    background-color:var(--lightColor);
 }
 
 /* Content */
