@@ -79,3 +79,16 @@ a {
     color: var(--linkColor);
     font-style: italic;
 }
+
+/* Images */
+
+.pixelArt {
+    image-rendering:pixelated;
+}
+
+.imageDescription {
+    font-style:italic;
+    font-size:14px;
+    text-align:right;
+    margin:0px;
+}
