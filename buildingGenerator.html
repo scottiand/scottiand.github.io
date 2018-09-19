@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>Scotti Anderson - Building Generator</title>
+    <meta name="Generator" content="Cocoa HTML Writer">
+    <meta name="CocoaVersion" content="1561.6">
+    <link rel="stylesheet" type="text/css" href="websiteStylesheet.css">
+    <script type="text/javascript" src="links.js"></script>
+    <!-- Script files-->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>-->
+    <script type="text/javascript" src="BuildingGenerator/js/Utilities.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/Geometry.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/BuildingRandom.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/rooms/RoomUtilities.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/rooms/RoomType.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/rooms/ProtoRoom.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/rooms/Room.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/doors/DoorType.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/doors/Door.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/rooms/RoomList.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/eventHandlers.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/buildingTypes/House.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/BuildingType.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/Plot.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/Building.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/BuildingConnectivityGraph.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/BuildingPlaceRooms.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/BuildingSnap.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/BuildingGaps.js"></script>
+    <script type="text/javascript" src="BuildingGenerator/js/buildings/BuildingDoors.js"></script>
+    <script src="BuildingGenerator/js/main.js"></script>
+</head>
+<header>
+    <h1>Scotti Anderson</h1>
+    <h2><a href="mailto:scottibanderson@gmail.com" style="font-style:normal">ScottiBAnderson@gmail.com</a></h2>
+</header>
+<body>
+    <section style="display:flex">
+        <nav style="width:25%">
+            <ul>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
+                    onclick="goToPage('aboutme.html')">About Me</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
+                    onclick="goToPage('software.html')">Software</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
+                    onclick="goToPage('games.html')">Games</li>
+                <li onmouseover="changeBackgroundColor(this, '#CAD2C5')" onmouseout="changeBackgroundColor(this, '#84A98C')"
+                    onclick="goToPage('art.html')">Art</li>
+            </ul>
+        </nav>
+        <div style="width:75%" class="main">
+            <article>
+                <div class="tabs" id="tabs">
+                    <button class="tablink" onclick="openFloor(event, 1)">Floor 1</button>
+                </div>
+                <div style="width: 700px; height: 400px; overflow: auto">
+                    <canvas id="canvas" width="600" height="400"
+                     onclick="canvasClicked(event)" onmousemove="canvasMouseOver(event)"></canvas>
+                </div>
+                <input type="text" name="seed" id="seedEntry" value="Seed">
+                <button id="generateButton" onclick="generateButtonOnClick(true)">Generate!</button>
+                <div class="slidecontainer">
+                    <input type="range" min="10" max="100" value="80" class="slider" id="myRange">
+                </div>
+                <div id="output">
+
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+<footer>
+    <span style="font-weight:bold;font-size:20px;">Scotti Anderson</span><br />
+    <a href="mailto:scottibanderson@gmail.com">ScottiBAnderson@gmail.com</a><br />
+    <a href="https://twitter.com/taletopgames">@taletopgames</a><br />
+    <a href="https://www.linkedin.com/in/scotti-anderson/">View my LinkedIn profile</a><br />
+</footer>
+</html>
