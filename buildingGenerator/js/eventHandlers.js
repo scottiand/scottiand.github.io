@@ -85,6 +85,10 @@ function setTabs() {
         var button = document.createElement('button');
         button.id = i.toString();
         button.innerText = 'Floor ' + i;
+        button.className = 'tablink';
+        if (currentBuilding.selectedFloor == i) {
+            button.style.backgroundColor = '#52796F';
+        }
         div.appendChild(button);
         button.addEventListener('click', function (event) {
             var id = this.id;

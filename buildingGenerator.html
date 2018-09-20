@@ -7,6 +7,7 @@
     <meta name="Generator" content="Cocoa HTML Writer">
     <meta name="CocoaVersion" content="1561.6">
     <link rel="stylesheet" type="text/css" href="websiteStylesheet.css">
+    <link rel="stylesheet" type="text/css" href="buildingGenerator/buildingGenerator.css">
     <script type="text/javascript" src="links.js"></script>
     <!-- Script files-->
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>-->
@@ -30,6 +31,7 @@
     <script type="text/javascript" src="buildingGenerator/js/buildings/BuildingSnap.js"></script>
     <script type="text/javascript" src="buildingGenerator/js/buildings/BuildingGaps.js"></script>
     <script type="text/javascript" src="buildingGenerator/js/buildings/BuildingDoors.js"></script>
+    <script src="buildingGenerator/bgLayout.js"></script>
     <script src="buildingGenerator/js/main.js"></script>
 </head>
 <header>
@@ -52,20 +54,47 @@
         </nav>
         <div style="width:75%" class="main">
             <article>
-                <div class="tabs" id="tabs">
-                    <button class="tablink" onclick="openFloor(event, 1)">Floor 1</button>
-                </div>
-                <div style="width: 700px; height: 400px; overflow: auto">
-                    <canvas id="canvas" width="600" height="400"
-                     onclick="canvasClicked(event)" onmousemove="canvasMouseOver(event)"></canvas>
-                </div>
-                <input type="text" name="seed" id="seedEntry" value="Seed">
-                <button id="generateButton" onclick="generateButtonOnClick(true)">Generate!</button>
-                <div class="slidecontainer">
-                    <input type="range" min="10" max="100" value="80" class="slider" id="myRange">
-                </div>
-                <div id="output">
+                <table style="width:100%">
 
+                    <tr style="width:100%">
+                        <td style="width:50%;max-width:50%">
+                            <div>
+                                <div class="tabs" id="tabs" style="background-color:'#CAD2C5'">
+                                    <button class="tablink" onclick="openFloor(event, 1)">Floor 1</button>
+                               </div>
+                                <div style="width: 100%; height: 400px; overflow: auto" class="can">
+                                    <canvas id="canvas" width="600" height="400"
+                                onclick="canvasClicked(event)" onmousemove="canvasMouseOver(event)" onmouseout="canvasMouseOut()"></canvas>
+                                </div>
+                                <span class="sliderLabel">Current Room:</span> </br>
+                                <div id="output">
+                                    -
+                                </div>
+                                <input type="text" name="seed" id="seedEntry" value="Seed" style="visibility:hidden">
+                            </div>
+                        </td>
+                        <td style="width:50%;">
+                            <div>
+                                <h5>Building Generator</h5>
+                                <p>
+                                    A procedural algorithm generates random floorplans for single or two 
+                                    story homes using a complex pattern of rules. Click the button below to 
+                                    generate a new house.
+                                </p>
+                                <div style="text-align:center;">
+                                    <button id="generateButton" onclick="generateButtonOnClick(true)" class="generateButton">Generate!</button>
+                                </div>
+                                <p>
+                                    You can change the size of the image using the slider at the bottom, 
+                                    and use the tabs above the floorplan to switch floors.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="slidecontainer">
+                    <span class="sliderLabel">Size:</span> </br>
+                    <input type="range" min="10" max="100" value="80" class="slider" id="myRange">
                 </div>
             </article>
         </div>

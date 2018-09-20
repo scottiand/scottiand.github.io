@@ -1,0 +1,51 @@
+﻿canvas {
+    background-color:white;
+    border-color:black;
+    border-width:thick;
+    border-style:solid;
+}
+
+.slider {
+    -webkit-appearance:none;
+    width:100%;
+    background: var(--mediumColor);
+    outline: none;
+
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width:20px;
+    background: var(--headerColor);
+}
+
+.sliderLabel {
+    font-weight:bold;
+}
+
+.slidecontainer {
+    margin-top:10px;
+}
+
+.tablink {
+    background-color: var(--headerColor);
+    border:none;
+    color: var(--lightColor);
+    font-family: Arial;
+    font-weight:bold;
+    font-size:16px;
+    padding:5px;
+    cursor:pointer;
+}
+
+.generateButton {
+    background-color: var(--headerColor);
+    border: none;
+    color: var(--lightColor);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
